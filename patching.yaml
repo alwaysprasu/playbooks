@@ -12,6 +12,7 @@
      yum:
       update_cache: yes
       name: "*"
+      state: latest
 
    - name: restart system to reboot to newest kernel
      shell: "sleep 5 && reboot"
