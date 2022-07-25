@@ -13,6 +13,11 @@
       update_cache: yes
       name: "*"
 
+   - name: restart system to reboot to newest kernel
+     shell: "sleep 5 && reboot"
+     async: 1
+     poll: 0
+
    - name: Check if reboot is required
      command: needs-restarting -r
      failed_when: false
