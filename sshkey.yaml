@@ -1,0 +1,9 @@
+---
+  - hosts: devops
+    name: copy the ssh key
+    tasks:
+    - name: install key
+      authorized_key:
+        user: root
+        state: present
+        key: "{{lookup('file','/root/.ssh/id_rsa.pub')}}" 
