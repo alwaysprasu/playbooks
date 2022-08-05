@@ -1,0 +1,8 @@
+---
+- hosts: devops
+  become: true
+  tasks:
+   - name: install packages
+     yum: 
+       name: ['git','vim','zip','unzip']
+...

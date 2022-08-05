@@ -1,0 +1,12 @@
+---
+- hosts: devops
+  become: true
+  tasks:
+   - name: create the user in all the nodes
+     user:
+      name: "{{items}}"
+      create_home: no
+      with_items:
+        - prasanna
+        - ansible
+...
